@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Carnival Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <h2>Campus Carnival Feedback Form</h2>
+        <p>Your data will comply with privacy regulations.</p>
+
+        <label for="age">Age:</label>
+        <select name="age" required>
+            <option value="16-19">16-19</option>
+            <option value="20-23">20-23</option>
+            <option value="24-27">24-27</option>
+            <option value="27-30">27-30</option>
+        </select>
+
+        <label for="status">Student or Graduate:</label>
+        <select name="status" required>
+            <option value="student">Student</option>
+            <option value="graduate">Graduate</option>
+        </select>
+
+        <label for="ladokite">Ladokite or Not:</label>
+        <select name="ladokite" required>
+            <option value="ladokite">Ladokite</option>
+            <option value="not-ladokite">Not Ladokite</option>
+        </select>
+
+        <label for="spending">Amount spent at Campus Carnival:</label>
+        <input type="number" name="spending" required>
+
+        <label for="feedback">Feedback about Campus Carnival:</label>
+        <textarea name="feedback" rows="4" required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+    
+</body>
+</html>
